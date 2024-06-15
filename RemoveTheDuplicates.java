@@ -1,19 +1,30 @@
-class RemoveTheDuplicates
+package com.sa.string;
+
+public class RemoveTheDuplicates
 {
 	public static void main(String[] args) 
 	{
-		String str="Subbarao";
+		String str="Kodimela Subbarao";
 		String result="";
-		char arr[]=str.toCharArray();
-		java.util.LinkedHashSet<Character> ts=new java.util.LinkedHashSet<>();
-		for(char c:arr)
+		for(int i=0;i<str.length();i++)
 		{
-			ts.add(c);
-		}
-		for(char ch:ts)
-		{
-			result +=ch;
+			int count=0;
+			if(str.charAt(i)!=' ')
+			{
+				for(int j=i+1;j<str.length();j++)
+				{
+					if(str.charAt(i)==str.charAt(j) && i!=j)
+					{
+						count++;
+					}
+				}
+				if(count==0)
+				{
+					result+=str.charAt(i);
+				}
+			}
 		}
 		System.out.println(result);
 	}
 }
+

@@ -1,15 +1,11 @@
-
-interface Add
+package com.sa.tasks;
+interface Drawable
 {
-	int add(int b);
+   void draw();
 }
 public class FunctionalInterface {
-	
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
-		int a = 10;
-		
-		Add add = (int b) -> b;
-		System.out.println(add.add(a));
+	   //() -> System.out.println("Drawing...");	
 	}
 }

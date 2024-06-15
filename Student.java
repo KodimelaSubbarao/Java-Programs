@@ -1,30 +1,38 @@
-package Subbarao;
+package com.sa.assignment9;
 
 public class Student 
 {
-	String name;
-	public Student()
-	{
-		name="Unknown";
+	private String name;
+	private String id;
+	private char grade;
+	
+	public Student(String name, String id, char grade) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.grade = grade;
 	}
-	public Student(String s)
-	{
-		name=s;
+	public String getName() {
+		return name;
 	}
-	public void meth1()
-	{
-		System.out.println("Student Name is : "+name);
+	public void setName(String name) {
+		this.name = name;
 	}
-	public static void main(String[] args) 
-	{
-		Student obj=new Student();
-		obj.meth1();
-		Student obj1=new Student("King");
-		obj1.meth1();
+	public String getId() {
+		return id;
 	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public char getGrade() {
+		return grade;
+	}
+	public void setGrade(char grade) {
+		this.grade = grade;
+	}
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", id=" + id + ", grade=" + grade + "]";
+	}
+	
 }
-
-
-
-
-

@@ -1,60 +1,20 @@
-/*
-abstract class A {	
-     void m1();
-   }
+package com.sa.tasks;
 
- public class A {	
-     abstract void m1();
-   }
-
-
- abstract public class A {	
-    abstract void m1();
-   }
-  
-
-abstract public class A 
-   {	
-     void m1() { }
-   }
-   
-
- public abstract class A {
-    abstract void m1();	
-    A(){ }	
-    void m2() { }
-    }
-
- public abstract class A {
-     abstract int x = 100;	
-     abstract void m1();
-     abstract void m2();
-    }
-	 
-
- public abstract class A {	
-    abstract void m1();
-   }
-   public class Test {
-   public static void main(String[] args) {
-    A a = new A();
-    }
-   }
-
-
- public abstract class A 
-   {	
-    abstract void m1();
-    A(){ }
-    static void m2() 
-    {
-    System.out.println("Hello Java!"); 
-    }
-   }
-    */
-
- public abstract class A {	
-    abstract void m1();
-   private A(){ }
-   }
+interface NIT1 
+{
+	String nit(String courseName);
+}
+interface Course1 extends NIT1
+{
+	String courseName();
+	String facultyName();
+	String duration();
+}
+public class A
+{
+	public static void main(String[] args) {
+		NIT1 nit = (String course) -> course;
+		System.out.println(nit.nit("Java"));
+	}
+}
 

@@ -1,16 +1,20 @@
-class FisrtNonRepeatedCharacterInString
+package com.sa.string;
+
+public class FisrtNonRepeatedCharacterInString
 {
 	public static void main(String[] args) 
 	{
 		String s="ububaraoS";
-		String result="";		
+		String result="";
+		
+		
+		
 			for(int i=0;i<s.length();i++)
 			{
-				int c=0;
-
+			int c=0;
 			if(s.charAt(i)!=' ')
 			{
-				for(int j=0;j<s.length();j++)
+				for(int j=i;j<s.length();j++)
 				{
 					if(s.charAt(i)==s.charAt(j) && i!=j)
 					{
