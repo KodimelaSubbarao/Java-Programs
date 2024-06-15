@@ -1,14 +1,18 @@
- class Foo {
+package Arrays;
+import java.util.Scanner;
+public class Exam2 
+{
+	public static void main(String[] args) 
 	{
-		int a = 25;
-	}
-	{
-		Foo obj = new Foo();
-		System.out.println(a);
-	}
-}
-public class Exam2 {
-	public static void main(String[] args) {
-		new Foo();
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=n;j>=i;j--)
+				System.out.print("*"+" ");
+			System.out.println();
+		}
+		
+		sc.close();
 	}
 }
