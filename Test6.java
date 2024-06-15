@@ -1,46 +1,21 @@
-import java.io.*;
-import java.util.*;
-class Prime extends Thread
+public class Test6 
 {
-	public void run()
-	{
-		try
-		{
-			for(int i=1;i<=10;i++)
-			{
-				if(i==2||i==3||i==5||i==7)
-				{
-					System.out.println ("Prime No.= "+i);
-				}
-				Thread.sleep(500);
-			}
-		}
-		catch (Exception e){}
-	}
+	 public static void main(String[] args) 
+	 {
+		         int number = 1;
+		         String letters = "abc"; 
+		         number = number(number); 
+		         letters(letters);   
+		         System.out.println(number + letters);    
+		      }
+		      public static int number(int number) 
+		      {
+		        number++;
+		        return number;
+		     }
+		    public static String letters(String letters)//abc 
+		    {
+		        letters += "d";
+		        return letters;
+		     }
 }
-class NotPrime extends Thread
-{
-	public void run()
-	{
-		try
-		{
-			for(int i=1;i<=10;i++)
-			{
-				if(i==4||i==6||i==8||i==9||i==10)
-				{
-					System.out.println ("Non-Prime No.= "+i);
-				}
-				Thread.sleep(500);
-			}
-		}
-		catch (Exception e){}
-	}
-}
-class Test6
-{
-	public static void main(String args[])
-	{
-		new Prime().start();
-		new NotPrime().start();
-	}
-}	

@@ -1,27 +1,18 @@
-class Test4
-	{
- public static void main(String args[])
-	{
-  Runnable r1=new Runnable()
+public class Test4 
+{
+  public static void main(String[] args) 
   {
-    public void run()
-	{
-      System.out.println("task one");
-    }
-  };
-
-  Runnable r2=new Runnable()
-  {
-    public void run()
-	{
-      System.out.println("task two");
-    }
-  };
-    
-  Thread t1=new Thread(r1);
-  Thread t2=new Thread(r2);
-
-  t1.start();
-  t2.start();
- }
+	  int original1 = 1;
+	   int original2 = 2;
+	   swap(original1, original2);
+	   System.out.println(original1);   
+	   System.out.println(original2);   
+	
+  }
+  
+  public static void swap(int a, int b) {
+	   int temp = a;
+	   a = b;
+	   b = temp;
+	 }
 }

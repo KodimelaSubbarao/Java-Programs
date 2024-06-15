@@ -1,12 +1,18 @@
-public class Main {
-    public static void main(String[] args) {
-        try {
-            int[] arr = new int[5];
-            arr[10] = 15;
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Exception caught: " + e.getMessage());
-        } finally {
-            System.out.println("Finally block executed.");
-        }
-    }
+class Main {
+
+  String languages;
+
+  // constructor accepting single value
+  Main(String lang) {
+    languages = lang;
+    System.out.println(languages + " Programming Language");
+  }
+
+  public static void main(String[] args) {
+
+    // call constructor by passing a single value
+    Main obj1 = new Main("Java");
+    Main obj2 = new Main("Python");
+    Main obj3 = new Main("C");
+  }
 }
